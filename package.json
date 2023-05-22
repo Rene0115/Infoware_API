@@ -4,7 +4,9 @@
   "description": "CRUD with mysql and pagination",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon dist/app.js",
+    "build": "rimraf dist && babel src --out-dir dist && node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,19 @@
   "homepage": "https://github.com/Rene0115/Infoware_API#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "pino": "^8.14.1"
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "pino": "^8.14.1",
+    "typeorm": "^0.3.16"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
+    "@babel/preset-env": "^7.21.5",
+    "nodemon": "^2.0.22",
+    "rimraf": "^5.0.1"
   }
 }
