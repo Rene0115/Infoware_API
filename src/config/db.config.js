@@ -6,6 +6,7 @@ dotenv.config();
 
   const dataSource = new DataSource({
     type: 'mysql',
+    port: 3306,
     host: 'localhost',
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
