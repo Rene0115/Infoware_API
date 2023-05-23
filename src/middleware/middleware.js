@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import errorHandler from "./error.middleware.js";
 import morgan from "morgan";
+import router from "../routers/index.routes.js";
 
 const middleware = (app) => {
   // Enable CORS
@@ -17,7 +18,7 @@ const middleware = (app) => {
   app.use(express.urlencoded({ extended: true }));
 
   // Register the router
-  app.use();
+  app.use(router);
 
   // Handle Errors
   app.use(errorHandler);
